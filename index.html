@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator_frame">
+        <div class="display">
+            <h1 class="display_text" id="calculator_text">✝⬇️⬅️</h1>
+        </div>
+        <div class="ui">
+            <h1 class="inp" id="n9" onclick="press_number(9)">9</h1>
+            <h1 class="inp" id="n8" onclick="press_number(8)">8</h1>
+            <h1 class="inp" id="n7" onclick="press_number(7)">7</h1>
+            <h1 class="inp" id="n6" onclick="press_number(6)">6</h1>
+            <h1 class="inp" id="n5" onclick="press_number(5)">5</h1>
+            <h1 class="inp" id="n4" onclick="press_number(4)">4</h1>
+            <h1 class="inp" id="n3" onclick="press_number(3)">3</h1>
+            <h1 class="inp" id="n2" onclick="press_number(2)">2</h1>
+            <h1 class="inp" id="n1" onclick="press_number(1)">1</h1>
+            <h1 class="inp" id="nc" onclick="press_number('C')">C</h1>
+            <h1 class="inp" id="n0" onclick="press_number(0)">0</h1>
+            <h1 class="inp" id="ne" onclick="press_number('E')">=</h1>
+        </div>
+    </div>
+    <div class="guessing_frame" id="number_guess_frame">
+        <p class="guess_text">The gnome has tought of a number between 17-64 (both included). Your job is to find out that number in 6 guesses.</p>
+        <p class="guess_text">After every unsuccesful try the gnome tells you where to look.</p>
+        <input type="number" class="guess_field" value="17" min="17" max="64" id="guess_input">
+        <br>
+        <button class="guess_button" onclick="try_guess()">Guess</button>
+        <p class="indicator" id="guess_indicator"></p>
+    </div>
+    <div class="dice_frame" id="dice_roll_frame">
+        <p class="dice_shape" id="dice">⚀</p>
+        <button class="roll" id="dice_roll" onclick="roll()">Roll</button>
+        <p class="roll_solved" id="solved_roll"></p>
+    </div>
+    <div class="game_won" id="win_title">Congratulations!</div>
+</body>
+<script src="script.js"></script>
+</html>
